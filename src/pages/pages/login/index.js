@@ -38,6 +38,8 @@ import BlankLayout from 'src/@core/layouts/BlankLayout'
 
 // ** Demo Imports
 import FooterIllustrationsV1 from 'src/views/pages/auth/FooterIllustration'
+import Logo from '../../../../public/images/web_logo.png'
+import Image from 'next/image'
 
 // ** Styled Components
 const Card = styled(MuiCard)(({ theme }) => ({
@@ -85,7 +87,7 @@ const LoginPage = () => {
       <Card sx={{ zIndex: 1 }}>
         <CardContent sx={{ padding: theme => `${theme.spacing(12, 9, 7)} !important` }}>
           <Box sx={{ mb: 8, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <svg
+            {/* <svg
               width={35}
               height={29}
               version='1.1'
@@ -143,8 +145,8 @@ const LoginPage = () => {
                   </g>
                 </g>
               </g>
-            </svg>
-            <Typography
+            </svg> */}
+            {/* <Typography
               variant='h6'
               sx={{
                 ml: 3,
@@ -155,11 +157,12 @@ const LoginPage = () => {
               }}
             >
               {themeConfig.templateName}
-            </Typography>
+            </Typography> */}
+            <Image src={Logo.src} width='160px' height='40px' />
           </Box>
           <Box sx={{ mb: 6 }}>
-            <Typography variant='h5' sx={{ fontWeight: 600, marginBottom: 1.5 }}>
-              Welcome to {themeConfig.templateName}! 👋🏻
+            <Typography variant='h6' sx={{ fontWeight: 600, marginBottom: 1.5, textAlign: 'center' }}>
+              Welcome to EasyTrademarks! 👋🏻
             </Typography>
             <Typography variant='body2'>Please sign-in to your account and start the adventure</Typography>
           </Box>
