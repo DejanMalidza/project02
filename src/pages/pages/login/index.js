@@ -158,7 +158,8 @@ const LoginPage = () => {
             >
               {themeConfig.templateName}
             </Typography> */}
-            <Image src={Logo.src} width='160px' height='40px' />
+            {/* <Image src={Logo.src} width='160px' height='40px' /> */}
+            Trademarks
           </Box>
           <Box sx={{ mb: 6 }}>
             <Typography variant='h6' sx={{ fontWeight: 600, marginBottom: 1.5, textAlign: 'center' }}>

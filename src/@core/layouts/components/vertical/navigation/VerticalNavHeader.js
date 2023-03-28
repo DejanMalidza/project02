@@ -110,7 +110,8 @@ const VerticalNavHeader = props => {
             </svg> */}
             <HeaderTitle variant='h6' sx={{ ml: 3 }}>
               {/* {themeConfig.templateName} */}
-              <Image src={Logo.src} width='135px' height='30px' />
+              {/* <Image src={Logo.src} width='135px' height='30px' /> */}
+              Trademarks
             </HeaderTitle>
           </StyledLink>
         </Link>
