@@ -1,11 +1,15 @@
 // ** Icon imports
 import Login from 'mdi-material-ui/Login'
 import Table from 'mdi-material-ui/Table'
+import Check from 'mdi-material-ui/Check'
+import TM from 'mdi-material-ui/Trademark'
+import Unpaid from 'mdi-material-ui/Alert'
+import Current from 'mdi-material-ui/NoteMultipleOutline'
 import CubeOutline from 'mdi-material-ui/CubeOutline'
 import HomeOutline from 'mdi-material-ui/HomeOutline'
 import FormatLetterCase from 'mdi-material-ui/FormatLetterCase'
 import AccountCogOutline from 'mdi-material-ui/AccountCogOutline'
-import CreditCardOutline from 'mdi-material-ui/CreditCardOutline'
+import Bell from 'mdi-material-ui/Bell'
 import AccountPlusOutline from 'mdi-material-ui/AccountPlusOutline'
 import AlertCircleOutline from 'mdi-material-ui/AlertCircleOutline'
 import GoogleCirclesExtended from 'mdi-material-ui/GoogleCirclesExtended'
@@ -18,9 +22,24 @@ const navigation = () => {
       path: '/'
     },
     {
-      title: 'Account Settings',
-      icon: AccountCogOutline,
-      path: '/account-settings'
+      title: 'Trademarks List',
+      icon: TM,
+      path: '/trademarks'
+    },
+    {
+      title: 'Current Orders',
+      icon: Current,
+      path: '/current'
+    },
+    {
+      title: 'Unpaid Orders',
+      icon: Unpaid,
+      path: '/unpaid'
+    },
+    {
+      title: 'Completed Orders',
+      icon: Check,
+      path: '/completed'
     },
     // {
     //   sectionTitle: 'Pages'
@@ -40,30 +59,35 @@ const navigation = () => {
     // {
     //   sectionTitle: 'User Interface'
     // },
+    // {
+    //   title: 'Typography',
+    //   icon: FormatLetterCase,
+    //   path: '/typography'
+    // },
+    // {
+    //   title: 'Icons',
+    //   path: '/icons',
+    //   icon: GoogleCirclesExtended
+    // },
+    // {
+    //   title: 'Tables',
+    //   icon: Table,
+    //   path: '/tables'
+    // },
     {
-      title: 'Typography',
-      icon: FormatLetterCase,
-      path: '/typography'
+      icon: Bell,
+      title: 'Clients Email Reminder',
+      path: '/form-layouts'
     },
     {
-      title: 'Icons',
-      path: '/icons',
-      icon: GoogleCirclesExtended
-    },
-    {
-      title: 'Cards',
-      icon: CreditCardOutline,
+      title: 'Import Renewals',
+      icon: Bell,
       path: '/cards'
     },
     {
-      title: 'Tables',
-      icon: Table,
-      path: '/tables'
-    },
-    {
-      icon: CubeOutline,
-      title: 'Form Layouts',
-      path: '/form-layouts'
+      title: 'Account Settings',
+      icon: AccountCogOutline,
+      path: '/account-settings'
     },
     {
       title: 'Logout',
