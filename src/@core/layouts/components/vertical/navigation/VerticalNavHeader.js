@@ -8,6 +8,8 @@ import Typography from '@mui/material/Typography'
 
 // ** Configs
 import themeConfig from 'src/configs/themeConfig'
+import Image from 'next/image'
+import Logo from '../../../../../../public/images/web_logo.png'
 
 // ** Styled Components
 const MenuHeaderWrapper = styled(Box)(({ theme }) => ({
@@ -47,7 +49,7 @@ const VerticalNavHeader = props => {
       ) : (
         <Link href='/' passHref>
           <StyledLink>
-            <svg
+            {/* <svg
               width={30}
               height={25}
               version='1.1'
@@ -105,9 +107,10 @@ const VerticalNavHeader = props => {
                   </g>
                 </g>
               </g>
-            </svg>
+            </svg> */}
             <HeaderTitle variant='h6' sx={{ ml: 3 }}>
-              {themeConfig.templateName}
+              {/* {themeConfig.templateName} */}
+              <Image src={Logo.src} width='135px' height='30px' />
             </HeaderTitle>
           </StyledLink>
         </Link>
