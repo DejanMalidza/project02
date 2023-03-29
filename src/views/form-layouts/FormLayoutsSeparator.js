@@ -125,6 +125,7 @@ const WhitePart = styled.div`
   margin-left: 10px;
   padding-top: 8px;
   font-size: 14px;
+  overflow: auto;
 `
 const SecondGrid = styled.div`
   display: inline-flex;
@@ -149,6 +150,7 @@ const WhitePart2 = styled.div`
   margin-left: 10px;
   padding-top: 8px;
   font-size: 14px;
+  overflow: auto;
 `
 
 const FormLayoutsSeparator = () => {
