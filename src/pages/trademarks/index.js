@@ -76,7 +76,7 @@ const MUITable = () => {
   return (
     <Grid container spacing={6}>
       <Grid item xs={12}>
-        <Typography variant='h5' style={{ borderBottom: '1px solid black', paddingBottom: '10px' }}>
+        <Typography variant='h5' style={{ borderBottom: '1px solid black', paddingBottom: '0px' }}>
           <Link href='https://mui.com/components/tables/' target='_blank' style={{ color: 'black' }}>
             Trademarks List
           </Link>
