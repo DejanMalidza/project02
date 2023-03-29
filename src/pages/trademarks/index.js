@@ -76,14 +76,14 @@ const MUITable = () => {
   return (
     <Grid container spacing={6}>
       <Grid item xs={12}>
-        <Typography variant='h5' style={{ borderBottom: '1px solid black' }}>
+        <Typography variant='h5' style={{ borderBottom: '1px solid black', paddingBottom: '10px' }}>
           <Link href='https://mui.com/components/tables/' target='_blank' style={{ color: 'black' }}>
             Trademarks List
           </Link>
         </Typography>
       </Grid>
       <Grid item xs={12}>
-        <div style={{ borderBottom: '1px solid black' }}>
+        <div style={{ borderBottom: '1px solid black', paddingBottom: '140px' }}>
           <WrapperDate>
             <p style={{ margin: '0', marginRight: '5px', color: 'black' }}>From:</p>
             <DatePicker1 selected={startDate} onChange={date => setStartDate(date)} />
@@ -93,7 +93,7 @@ const MUITable = () => {
           <Button>filter by date</Button>
         </div>
       </Grid>
-      <Grid item xs={12} style={{ color: 'black' }}>
+      <Grid item xs={12} style={{ color: 'black', paddingBottom: '20px' }}>
         <First>
           <p style={{ margin: 'auto', marginRight: '5px', color: 'black' }}>Show</p>
           <Input placeholder='10'></Input>
