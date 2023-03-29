@@ -19,6 +19,17 @@ import 'react-datepicker/dist/react-datepicker.css'
 import MenuDown from '../../../public/images/avatars/down.png'
 import Image from 'next/image'
 
+// ** MUI Imports
+import Box from '@mui/material/Box'
+import TextField from '@mui/material/TextField'
+import IconButton from '@mui/material/IconButton'
+import useMediaQuery from '@mui/material/useMediaQuery'
+import InputAdornment from '@mui/material/InputAdornment'
+
+// ** Icons Imports
+import Menu from 'mdi-material-ui/Menu'
+import Magnify from 'mdi-material-ui/Magnify'
+
 const WrapperDate = styled.div`
   padding: 15px 0 15px 0;
   display: inline-flex;
@@ -37,6 +48,13 @@ const Button = styled.button`
 const First = styled.div`
   display: inline-flex;
 `
+
+const Second = styled.div`
+  display: inline-flex;
+  position: absolute;
+  right: 14px;
+  margin-top: -10px;
+`
 const Input = styled.input`
   width: 80px;
   height: 35px;
@@ -44,6 +62,7 @@ const Input = styled.input`
   margin-right: 5px;
 `
 const Image1 = styled(Image)``
+
 const WrapperImage1 = styled.div`
   width: 15px;
   height: 15px;
@@ -83,7 +102,22 @@ const MUITable = () => {
           </WrapperImage1>
           <p style={{ margin: 'auto', marginLeft: '5px', color: 'black' }}>entries</p>
         </First>
-        <div></div>
+        <Second>
+          <Box className='actions-left' sx={{ mr: 2, display: 'flex', alignItems: 'center' }}>
+            <p style={{ marginRight: '10px' }}>Search:</p>
+            <TextField
+              size='small'
+              sx={{ '& .MuiOutlinedInput-root': { borderRadius: 4 } }}
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position='start'>
+                    <Magnify fontSize='small' />
+                  </InputAdornment>
+                )
+              }}
+            />
+          </Box>
+        </Second>
       </Grid>
       <Grid item xs={12}>
         <Card>
