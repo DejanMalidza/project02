@@ -27,6 +27,7 @@ import EyeOutline from 'mdi-material-ui/EyeOutline'
 import EyeOffOutline from 'mdi-material-ui/EyeOffOutline'
 import styled from '@emotion/styled'
 import MenuDown from '../../../public/images/avatars/download.png'
+import Doc from '../../../public/images/avatars/doc.png'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -395,7 +396,13 @@ const FormLayoutsSeparator = () => {
                 <WhitePart3>dd/mm/yyyy</WhitePart3>
                 <BluePart3>Update</BluePart3>
               </FirstGrid>
-              <p style={{ marginTop: '70px' }}>Trademarks Documents List</p>
+              <div>
+                <p style={{ marginTop: '70px' }}>
+                  {' '}
+                  <Image src={Doc.src} height='20px' width='20px' />
+                  Trademarks Documents List
+                </p>
+              </div>
               <p style={{ borderBottom: '0.5px solid grey', paddingBottom: '20px', marginTop: '-15px' }}></p>
               <p>No documents yet!</p>
             </Grid>
