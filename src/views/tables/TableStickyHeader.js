@@ -11,6 +11,7 @@ import TableCell from '@mui/material/TableCell'
 import TableContainer from '@mui/material/TableContainer'
 import TablePagination from '@mui/material/TablePagination'
 import styled from '@emotion/styled'
+import Link from 'next/link'
 
 const columns = [
   { id: 'number', label: '#', minWidth: 50 },
@@ -159,9 +160,11 @@ const TableStickyHeader = () => {
                     const value = row[column.id]
 
                     return (
-                      <TableCell key={column.id} align={column.align}>
-                        {column.format && typeof value === 'number' ? column.format(value) : value}
-                      </TableCell>
+                      <Link href='/order-detail'>
+                        <TableCell key={column.id} align={column.align} style={{ cursor: 'pointer' }}>
+                          {column.format && typeof value === 'number' ? column.format(value) : value}
+                        </TableCell>
+                      </Link>
                     )
                   })}
                 </TableRow>

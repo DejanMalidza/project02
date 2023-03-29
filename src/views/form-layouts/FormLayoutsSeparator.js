@@ -25,10 +25,82 @@ import DatePicker from 'react-datepicker'
 // ** Icons Imports
 import EyeOutline from 'mdi-material-ui/EyeOutline'
 import EyeOffOutline from 'mdi-material-ui/EyeOffOutline'
+import styled from '@emotion/styled'
+import MenuDown from '../../../public/images/avatars/download.png'
+import Image from 'next/image'
+import Link from 'next/link'
 
 const CustomInput = forwardRef((props, ref) => {
   return <TextField fullWidth {...props} inputRef={ref} label='Birth Date' autoComplete='off' />
 })
+
+const Back = styled.button`
+  position: absolute;
+  right: 0;
+  padding: 5px;
+  width: 70px;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #1d3394;
+  margin-right: 45px;
+  margin-top: -40px;
+`
+
+const Button1 = styled.button`
+  width: 310px;
+  height: 50px;
+  border: none;
+  color: white;
+  background-color: #63c6d7;
+  font-weight: 600;
+  cursor: pointer;
+`
+
+const Button2 = styled.button`
+  width: 200px;
+  height: 50px;
+  border: none;
+  color: white;
+  background-color: #1d3394;
+  font-weight: 600;
+  cursor: pointer;
+`
+
+const Button3 = styled.button`
+  width: 200px;
+  height: 50px;
+  border: none;
+  color: white;
+  background-color: #1d3394;
+  font-weight: 600;
+  cursor: pointer;
+`
+
+const Button4 = styled.button`
+  width: 50px;
+  height: 40px;
+  border: none;
+  color: white;
+  background-color: white;
+  border: 1px solid grey;
+  font-weight: 600;
+  margin-left: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+`
+
+const Button5 = styled.button`
+  width: 100%;
+  height: 60px;
+  border: none;
+  color: black;
+  border-radius: 10px;
+  background-color: #63c6d770;
+`
+
+const ImageBox = styled(Image)``
 
 const FormLayoutsSeparator = () => {
   // ** States
@@ -75,15 +147,30 @@ const FormLayoutsSeparator = () => {
 
   return (
     <Card>
-      <CardHeader title='Multi Column with Form Separator' titleTypographyProps={{ variant: 'h6' }} />
+      <CardHeader title='Order Details' titleTypographyProps={{ variant: 'h6' }} />
+      <Link href='/current'>
+        <Back>Back</Back>
+      </Link>
       <Divider sx={{ margin: 0 }} />
       <form onSubmit={e => e.preventDefault()}>
         <CardContent>
           <Grid container spacing={5}>
             <Grid item xs={12}>
-              <Typography variant='body2' sx={{ fontWeight: 600 }}>
-                1. Account Details
-              </Typography>
+              <Button1>Uploade TM Response Documents</Button1>
+            </Grid>
+            <Grid item xs={12}>
+              <Button2>Export Excel File</Button2>
+            </Grid>
+            <Grid item xs={12}>
+              <Button3>View TM Image</Button3>
+              <Button4>
+                <ImageBox src={MenuDown.src} height='25px' width='25px' />
+              </Button4>
+            </Grid>
+            <Grid item xs={12}>
+              <Button5>
+                <p style={{ fontSize: '16px' }}>Registration</p>
+              </Button5>
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField fullWidth label='Username' placeholder='carterLeonard' />
@@ -205,16 +292,18 @@ const FormLayoutsSeparator = () => {
               <TextField fullWidth label='Phone No.' placeholder='+1-123-456-8790' />
             </Grid>
           </Grid>
+          <Grid item xs={12} style={{ marginTop: '40px' }}>
+            <Button5>
+              <p style={{ fontSize: '16px' }}>Publication</p>
+            </Button5>
+          </Grid>
+          <Grid item xs={12} style={{ marginTop: '40px' }}>
+            <Button5>
+              <p style={{ fontSize: '16px' }}>Final Registration</p>
+            </Button5>
+          </Grid>
         </CardContent>
         <Divider sx={{ margin: 0 }} />
-        <CardActions>
-          <Button size='large' type='submit' sx={{ mr: 2 }} variant='contained'>
-            Submit
-          </Button>
-          <Button size='large' color='secondary' variant='outlined'>
-            Cancel
-          </Button>
-        </CardActions>
       </form>
     </Card>
   )
