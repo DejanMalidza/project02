@@ -83,7 +83,7 @@ const MUITable = () => {
         </Typography>
       </Grid>
       <Grid item xs={12}>
-        <div style={{ borderBottom: '1px solid black', paddingBottom: '140px' }}>
+        <div style={{ borderBottom: '1px solid black', paddingBottom: '0px' }}>
           <WrapperDate>
             <p style={{ margin: '0', marginRight: '5px', color: 'black' }}>From:</p>
             <DatePicker1 selected={startDate} onChange={date => setStartDate(date)} />
@@ -93,7 +93,7 @@ const MUITable = () => {
           <Button>filter by date</Button>
         </div>
       </Grid>
-      <Grid item xs={12} style={{ color: 'black', paddingBottom: '20px' }}>
+      <Grid item xs={12} style={{ color: 'black', paddingBottom: '10px' }}>
         <First>
           <p style={{ margin: 'auto', marginRight: '5px', color: 'black' }}>Show</p>
           <Input placeholder='10'></Input>

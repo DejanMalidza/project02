@@ -153,6 +153,22 @@ const WhitePart2 = styled.div`
   overflow: auto;
 `
 
+const WhitePart3 = styled.div`
+  width: 82%;
+  background-color: white;
+  margin-left: 10px;
+  padding-top: 8px;
+  font-size: 14px;
+`
+const BluePart3 = styled.div`
+  width: 18%;
+  background-color: #63c6d7;
+  color: white;
+  text-align: center;
+  padding-top: 8px;
+  font-size: 14px;
+`
+
 const FormLayoutsSeparator = () => {
   // ** States
   const [language, setLanguage] = useState([])
@@ -320,6 +336,68 @@ const FormLayoutsSeparator = () => {
                 <GreyPart>Order Status</GreyPart>
                 <WhitePart>Received</WhitePart>
               </FirstGrid>
+              <SecondGrid>
+                <GreyPart2>TM Status</GreyPart2>
+                <WhitePart2>Instruction Received from Client - pending ET</WhitePart2>
+              </SecondGrid>
+              <p style={{ borderBottom: '0.5px solid grey', paddingBottom: '20px', marginTop: '-10px' }}></p>
+              <FirstGrid>
+                <GreyPart>Select TM Status</GreyPart>
+                <WhitePart>Instruction Received from Client - pending ET</WhitePart>
+              </FirstGrid>
+              <Button2 style={{ backgroundColor: 'green', marginTop: '10px' }}>Update Trademark Status</Button2>
+              <p style={{ borderBottom: '0.5px solid grey', paddingBottom: '20px', marginTop: '10px' }}></p>
+              <Button2 style={{ marginTop: '10px', width: '240px' }}>Move Order to in process List</Button2>
+              <p style={{ marginTop: '110px' }}>Filling Data</p>
+              <p style={{ borderBottom: '0.5px solid grey', paddingBottom: '20px', marginTop: '-10px' }}></p>
+              <p style={{ fontWeight: '600', marginBottom: '5px' }}>Filling Number</p>
+              <FirstGrid style={{ margin: '0px' }}></FirstGrid>
+              <p style={{ fontWeight: '600', marginBottom: '5px' }}>Filling Date</p>
+              <FirstGrid style={{ margin: '0px', paddingTop: '6px', paddingLeft: '10px' }}>dd/mm/yyyy</FirstGrid>
+              <Button2 style={{ marginTop: '10px', width: '160px', backgroundColor: '#63c6d7' }}>
+                Set Filling Data
+              </Button2>
+              <p style={{ borderBottom: '0.5px solid grey', paddingBottom: '20px', marginTop: '0px' }}></p>
+              <p style={{ marginTop: '90px' }}>Dates List</p>
+              <p style={{ borderBottom: '0.5px solid grey', paddingBottom: '20px', marginTop: '-10px' }}></p>
+              <p style={{ fontWeight: '600', marginBottom: '5px', marginTop: '40px' }}>Acceptance date</p>
+              <FirstGrid style={{ margin: '0px' }}>
+                <WhitePart3>dd/mm/yyyy</WhitePart3>
+                <BluePart3>Update</BluePart3>
+              </FirstGrid>
+              <p style={{ fontWeight: '600', marginBottom: '5px' }}>Publication date</p>
+              <FirstGrid style={{ margin: '0px' }}>
+                {' '}
+                <WhitePart3>dd/mm/yyyy</WhitePart3>
+                <BluePart3>Update</BluePart3>
+              </FirstGrid>
+              <p style={{ fontWeight: '600', marginBottom: '5px' }}>Registration date</p>
+              <FirstGrid style={{ margin: '0px' }}>
+                {' '}
+                <WhitePart3>dd/mm/yyyy</WhitePart3>
+                <BluePart3>Update</BluePart3>
+              </FirstGrid>
+              <p style={{ fontWeight: '600', marginBottom: '5px' }}>Expiration date</p>
+              <FirstGrid style={{ margin: '0px' }}>
+                {' '}
+                <WhitePart3>dd/mm/yyyy</WhitePart3>
+                <BluePart3>Update</BluePart3>
+              </FirstGrid>
+              <p style={{ fontWeight: '600', marginBottom: '5px' }}>Date of next action</p>
+              <FirstGrid style={{ margin: '0px' }}>
+                {' '}
+                <WhitePart3>dd/mm/yyyy</WhitePart3>
+                <BluePart3>Update</BluePart3>
+              </FirstGrid>
+              <p style={{ fontWeight: '600', marginBottom: '5px' }}>Rejection Date</p>
+              <FirstGrid style={{ margin: '0px' }}>
+                {' '}
+                <WhitePart3>dd/mm/yyyy</WhitePart3>
+                <BluePart3>Update</BluePart3>
+              </FirstGrid>
+              <p style={{ marginTop: '70px' }}>Trademarks Documents List</p>
+              <p style={{ borderBottom: '0.5px solid grey', paddingBottom: '20px', marginTop: '-15px' }}></p>
+              <p>No documents yet!</p>
             </Grid>
             {/* <Grid item xs={12} sm={6}>
               <FormControl fullWidth>
