@@ -102,6 +102,55 @@ const Button5 = styled.button`
 
 const ImageBox = styled(Image)``
 
+const FirstGrid = styled.div`
+  display: inline-flex;
+  width: 80%;
+  border: 2px solid grey;
+  border-radius: 5px;
+  height: 40px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+`
+
+const GreyPart = styled.div`
+  width: 35%;
+  background-color: #80808047;
+  text-align: center;
+  padding-top: 8px;
+  font-size: 14px;
+`
+const WhitePart = styled.div`
+  width: 65%;
+  background-color: white;
+  margin-left: 10px;
+  padding-top: 8px;
+  font-size: 14px;
+`
+const SecondGrid = styled.div`
+  display: inline-flex;
+  width: 80%;
+  border: 2px solid grey;
+  border-radius: 5px;
+  height: 90px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+`
+
+const GreyPart2 = styled.div`
+  width: 35%;
+  background-color: #80808047;
+  text-align: center;
+  padding-top: 32px;
+  font-size: 14px;
+`
+const WhitePart2 = styled.div`
+  width: 65%;
+  background-color: white;
+  margin-left: 10px;
+  padding-top: 8px;
+  font-size: 14px;
+`
+
 const FormLayoutsSeparator = () => {
   // ** States
   const [language, setLanguage] = useState([])
@@ -173,12 +222,104 @@ const FormLayoutsSeparator = () => {
               </Button5>
             </Grid>
             <Grid item xs={12} sm={6}>
-              <TextField fullWidth label='Username' placeholder='carterLeonard' />
+              <FirstGrid>
+                <GreyPart>TM Reference</GreyPart>
+                <WhitePart>3760210323</WhitePart>
+              </FirstGrid>
+              <FirstGrid>
+                <GreyPart>TM Label</GreyPart>
+                <WhitePart>LADERACH</WhitePart>
+              </FirstGrid>
+              <FirstGrid>
+                <GreyPart>Service</GreyPart>
+                <WhitePart>Registration filing</WhitePart>
+              </FirstGrid>
+              <FirstGrid>
+                <GreyPart>Package Type</GreyPart>
+                <WhitePart>Relax and we will do the work (Premium)</WhitePart>
+              </FirstGrid>
+              <FirstGrid>
+                <GreyPart>Country</GreyPart>
+                <WhitePart>Egypt</WhitePart>
+              </FirstGrid>
+              <FirstGrid>
+                <GreyPart>Classes</GreyPart>
+                <WhitePart>30</WhitePart>
+              </FirstGrid>
+              <FirstGrid>
+                <GreyPart>Quick Turnaround</GreyPart>
+                <WhitePart>No</WhitePart>
+              </FirstGrid>
+              <SecondGrid>
+                <GreyPart2>Briefly Describe</GreyPart2>
+                <WhitePart2>The mark consists of the word "LADERACH" written in special Latin characters</WhitePart2>
+              </SecondGrid>
+              <FirstGrid>
+                <GreyPart>Trademark Meaning</GreyPart>
+                <WhitePart>No</WhitePart>
+              </FirstGrid>
+              <FirstGrid>
+                <GreyPart>TM Language</GreyPart>
+                <WhitePart>English</WhitePart>
+              </FirstGrid>
+              <FirstGrid>
+                <GreyPart>Protect in color?</GreyPart>
+                <WhitePart>No</WhitePart>
+              </FirstGrid>
+              <FirstGrid>
+                <GreyPart>TM Colors</GreyPart>
+                <WhitePart></WhitePart>
+              </FirstGrid>
+              <p style={{ borderBottom: '0.5px solid grey', paddingBottom: '20px', marginTop: '40px' }}>
+                Claiming Convention Priority
+              </p>
+              <FirstGrid>
+                <GreyPart>Claim Convention</GreyPart>
+                <WhitePart>No</WhitePart>
+              </FirstGrid>
+              <p style={{ borderBottom: '0.5px solid grey', paddingBottom: '20px', marginTop: '25px' }}></p>
+              <FirstGrid style={{ marginTop: '40px' }}>
+                <GreyPart>Applicant's Type</GreyPart>
+                <WhitePart>Company</WhitePart>
+              </FirstGrid>
+              <FirstGrid>
+                <GreyPart>Applicant Occupation</GreyPart>
+                <WhitePart>Services</WhitePart>
+              </FirstGrid>
+              <FirstGrid>
+                <GreyPart>Company Type</GreyPart>
+                <WhitePart>Limited Liability Company (LLC)</WhitePart>
+              </FirstGrid>
+              <FirstGrid>
+                <GreyPart>Applicant Name</GreyPart>
+                <WhitePart>LADERACH (SCHWEIZ) AG</WhitePart>
+              </FirstGrid>
+              <FirstGrid>
+                <GreyPart>Applicant Nationality</GreyPart>
+                <WhitePart>Swiss</WhitePart>
+              </FirstGrid>
+              <SecondGrid>
+                <GreyPart2>Applicant Address</GreyPart2>
+                <WhitePart2>Bleiche 14, 8755 Ennenda, Switzerland</WhitePart2>
+              </SecondGrid>
+              <SecondGrid>
+                <GreyPart2>Goods/Services Desc</GreyPart2>
+                <WhitePart2 style={{ fontSize: '13px', overflowY: 'scroll' }}>
+                  Pralines; confectionery products; Natural sweeteners; Seasoned coatings; frozen yougurt[edible ices];
+                  Ice cream; Sherbets [ices]; Ice cubes; Spices; Mixtures of coffee; Coffee essences; Coffee flavorings;
+                  Glazed popcorn{' '}
+                </WhitePart2>
+              </SecondGrid>
             </Grid>
+            {/* ----------------------------------- */}
+            {/* Second Column */}
             <Grid item xs={12} sm={6}>
-              <TextField fullWidth type='email' label='Email' placeholder='carterleonard@gmail.com' />
+              <FirstGrid>
+                <GreyPart>Order Status</GreyPart>
+                <WhitePart>Received</WhitePart>
+              </FirstGrid>
             </Grid>
-            <Grid item xs={12} sm={6}>
+            {/* <Grid item xs={12} sm={6}>
               <FormControl fullWidth>
                 <InputLabel htmlFor='form-layouts-separator-password'>Password</InputLabel>
                 <OutlinedInput
@@ -201,8 +342,8 @@ const FormLayoutsSeparator = () => {
                   }
                 />
               </FormControl>
-            </Grid>
-            <Grid item xs={12} sm={6}>
+            </Grid> */}
+            {/* <Grid item xs={12} sm={6}>
               <FormControl fullWidth>
                 <InputLabel htmlFor='form-layouts-separator-password-2'>Confirm Password</InputLabel>
                 <OutlinedInput
@@ -225,8 +366,8 @@ const FormLayoutsSeparator = () => {
                   }
                 />
               </FormControl>
-            </Grid>
-            <Grid item xs={12}>
+            </Grid> */}
+            {/* <Grid item xs={12}>
               <Divider sx={{ marginBottom: 0 }} />
             </Grid>
             <Grid item xs={12}>
@@ -290,7 +431,7 @@ const FormLayoutsSeparator = () => {
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField fullWidth label='Phone No.' placeholder='+1-123-456-8790' />
-            </Grid>
+            </Grid> */}
           </Grid>
           <Grid item xs={12} style={{ marginTop: '40px' }}>
             <Button5>
