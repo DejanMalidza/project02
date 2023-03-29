@@ -10,55 +10,76 @@ import TableBody from '@mui/material/TableBody'
 import TableCell from '@mui/material/TableCell'
 import TableContainer from '@mui/material/TableContainer'
 import TablePagination from '@mui/material/TablePagination'
+import styled from '@emotion/styled'
 
 const columns = [
-  { id: 'name', label: 'Name', minWidth: 170 },
-  { id: 'code', label: 'ISO\u00a0Code', minWidth: 100 },
+  { id: 'number', label: '#', minWidth: 50 },
+  { id: 'name', label: 'TM Reference', minWidth: 170 },
+  { id: 'code', label: 'TM Label', minWidth: 100 },
   {
     id: 'population',
-    label: 'Population',
-    minWidth: 170,
-    align: 'right',
+    label: 'Client Name',
+    minWidth: 100,
+    align: 'left',
     format: value => value.toLocaleString('en-US')
   },
   {
     id: 'size',
-    label: 'Size\u00a0(km\u00b2)',
-    minWidth: 170,
-    align: 'right',
+    label: 'Client Email',
+    minWidth: 100,
+    align: 'left',
     format: value => value.toLocaleString('en-US')
   },
   {
     id: 'density',
-    label: 'Density',
+    label: 'Created Date',
     minWidth: 170,
-    align: 'right',
+    align: 'left',
     format: value => value.toFixed(2)
   }
 ]
-function createData(name, code, population, size) {
-  const density = population / size
 
-  return { name, code, population, size, density }
+const data = [
+  { placeholder: '', display: 'none' },
+  { placeholder: 'Search TM Reference', display: '' },
+  { placeholder: 'Search TM Label', display: '' },
+  { placeholder: 'Search Client Name', display: '' },
+  { placeholder: 'Search Client Email', display: '' },
+  { placeholder: 'Search Created Date', display: '' }
+]
+
+function createData(number, name, code, population, size, density) {
+  return { number, name, code, population, size, density }
 }
 
 const rows = [
-  createData('India', 'IN', 1324171354, 3287263),
-  createData('China', 'CN', 1403500365, 9596961),
-  createData('Italy', 'IT', 60483973, 301340),
-  createData('United States', 'US', 327167434, 9833520),
-  createData('Canada', 'CA', 37602103, 9984670),
-  createData('Australia', 'AU', 25475400, 7692024),
-  createData('Germany', 'DE', 83019200, 357578),
-  createData('Ireland', 'IE', 4857000, 70273),
-  createData('Mexico', 'MX', 126577691, 1972550),
-  createData('Japan', 'JP', 126317000, 377973),
-  createData('France', 'FR', 67022000, 640679),
-  createData('United Kingdom', 'GB', 67545757, 242495),
-  createData('Russia', 'RU', 146793744, 17098246),
-  createData('Nigeria', 'NG', 200962417, 923768),
-  createData('Brazil', 'BR', 210147125, 8515767)
+  createData(1, '1324171354', 'fgf', 'Nada', 'nada@trademark.com', '2023-03-26'),
+  createData(2, '1403500365', 'Test 2', 'Rita', 'ritaaboumhaya@gmail.com', '2023-03-26'),
+  createData(3, '6048397334', 'Test renewal', 'Rita', 'ritaaboumhaya@gmail.com', '2023-03-25'),
+  createData(4, '3271674343', 'test', 'Dejan', 'dejanmalidza@gmail.com', '2023-03-18'),
+  createData(5, '3760210323', 'LADERACH', 'John', 'john89@gmail.com', '2023-03-18'),
+  createData(6, '2547540034', 'LADERACH - SWITZERLAND', 'JohnN', 'john89@gmail.com', '2023-03-01'),
+  createData(7, '8301920089', 'LADERACH - SWITZERLAND', 'JohnN', 'john89@gmail.com', '2023-03-01'),
+  createData(8, '4857000085', 'LADERACH - SWITZERLAND', 'JohnN', 'john89@gmail.com', '2023-03-01'),
+  createData(9, '1265776911', 'LADERACH - SWITZERLAND', 'JohnN', 'john89@gmail.com', '2023-03-01'),
+  createData(10, '1263170000', 'Corporat Stack', 'Claus', 'claus0090@gmail.com', '2023-02-25'),
+  createData(11, '6702200055', 'Chocolate Bash', 'Michael', 'projectproperty@gmail.com', '2023-02-06'),
+  createData(12, '6754575723', 'Chocolate Bash', 'Michael', 'projectproperty@gmail.com', '2023-02-06'),
+  createData(13, '1467937446', 'Chocolate Bash', 'Michael', 'projectproperty@gmail.com', '2023-02-06'),
+  createData(14, '2009624173', 'Test 5', 'Rita', 'ritaaboumhaya@gmail.com', '2023-02-05'),
+  createData(15, '2101471259', 'LADERACH', 'John', 'john89@gmail.com', '2023-02-01'),
+  createData(16, '6702200055', 'Chocolate Bash', 'Michael', 'projectproperty@gmail.com', '2023-02-06'),
+  createData(17, '6754575723', 'Chocolate Bash', 'Michael', 'projectproperty@gmail.com', '2023-02-06'),
+  createData(18, '1467937446', 'Chocolate Bash', 'Michael', 'projectproperty@gmail.com', '2023-02-06'),
+  createData(19, '2009624173', 'Test 5', 'Rita', 'ritaaboumhaya@gmail.com', '2023-02-05'),
+  createData(20, '2101471259', 'LADERACH', 'John', 'john89@gmail.com', '2023-02-01')
 ]
+
+const Input = styled.input`
+  width: 100%;
+  border: 1px solid black;
+  height: 30px;
+`
 
 const TableStickyHeader = () => {
   // ** States
@@ -76,13 +97,20 @@ const TableStickyHeader = () => {
 
   return (
     <Paper sx={{ width: '100%', overflow: 'hidden' }}>
-      <TableContainer sx={{ maxHeight: 440 }}>
+      <TableContainer>
         <Table stickyHeader aria-label='sticky table'>
           <TableHead>
             <TableRow>
               {columns.map(column => (
                 <TableCell key={column.id} align={column.align} sx={{ minWidth: column.minWidth }}>
                   {column.label}
+                </TableCell>
+              ))}
+            </TableRow>
+            <TableRow>
+              {data.map(dataa => (
+                <TableCell>
+                  <Input placeholder={`${dataa.placeholder}`} style={{ display: `${dataa.display}` }}></Input>
                 </TableCell>
               ))}
             </TableRow>
