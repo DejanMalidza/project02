@@ -4,6 +4,11 @@ module.exports = {
     es6: true,
     browser: true
   },
+  extends: next,
+  rules: {
+    'react/no-unescaped-entities': 'off',
+    '@next/next/no-page-custom-font': 'off'
+  },
   parser: 'babel-eslint',
   extends: ['next/core-web-vitals', 'prettier'],
   parserOptions: {
