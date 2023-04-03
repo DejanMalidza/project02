@@ -36,7 +36,7 @@ const CustomInput = forwardRef((props, ref) => {
 })
 
 const Back = styled.button`
-  position: absolute;
+  position: relative;
   right: 0;
   padding: 5px;
   width: 70px;
@@ -216,9 +216,11 @@ const FormLayoutsSeparator = () => {
   return (
     <Card>
       <CardHeader title='Order Details' titleTypographyProps={{ variant: 'h6' }} />
-      <Link href='/current'>
-        <Back>Back</Back>
-      </Link>
+      <div style={{ textAlign: 'right', marginTop: '-45px', paddingBottom: '15px' }}>
+        <Link href='/current'>
+          <Back>Back</Back>
+        </Link>
+      </div>
       <Divider sx={{ margin: 0 }} />
       <form onSubmit={e => e.preventDefault()}>
         <CardContent>

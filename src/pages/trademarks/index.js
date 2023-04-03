@@ -50,8 +50,8 @@ const First = styled.div`
 `
 
 const Second = styled.div`
-  display: inline-flex;
-  position: absolute;
+  display: contents;
+  //position: absolute;
   right: 14px;
   margin-top: -10px;
 `
@@ -103,7 +103,10 @@ const MUITable = () => {
           <p style={{ margin: 'auto', marginLeft: '5px', color: 'black' }}>entries</p>
         </First>
         <Second>
-          <Box className='actions-left' sx={{ mr: 2, display: 'flex', alignItems: 'center' }}>
+          <Box
+            className='actions-left'
+            sx={{ mr: 2, display: 'flex', alignItems: 'center', justifyContent: 'end', marginTop: '-45px' }}
+          >
             <p style={{ marginRight: '10px' }}>Search:</p>
             <TextField
               size='small'

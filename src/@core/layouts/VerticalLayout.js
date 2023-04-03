@@ -73,7 +73,7 @@ const VerticalLayout = props => {
           <AppBar toggleNavVisibility={toggleNavVisibility} {...props} />
 
           <ContentWrapper
-            style={{ backgroundColor: '#1532757d' }}
+            style={{ backgroundColor: '#ebecf5' }}
             className='layout-page-content'
             sx={{
               ...(contentWidth === 'boxed' && {
